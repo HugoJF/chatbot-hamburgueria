@@ -1,0 +1,97 @@
+text,intention
+vcs tem refrigerante litro ?,bebidas
+quais bebidas vocês tem?,bebidas
+Quais são as bebidas disponiveis?,bebidas
+o que tem pra beber?,bebidas
+que tipo de bebida tem?,bebidas
+tem refri lata?,bebidas
+quais sucos voces tem?,bebidas
+tem suco?,bebidas
+tem coca?,bebidas
+quais refrigerantes tem?,bebidas
+vocês teriam coca 600?,bebidas
+tem suco natural?,bebidas
+"boa noite, gostaria de saber o cardápio",cardapio
+quero cardapio,cardapio
+quais hamburgueres voces tem?,cardapio
+gostaria de fazer um pedido,cardapio
+"sim, quais as opções?",cardapio
+Poderia me enviar o cardápio por favor??,cardapio
+poderia ver o cardapio?,cardapio
+"Por favor, qual o cardápio do dia?",cardapio
+o que tem no menu?,cardapio
+gostaria de saber o que tem hoje,cardapio
+o que tem pra escolher?,cardapio
+posso olhar o cardápio?,cardapio
+quanto fica tudo?,conta
+vai da quanto no final?,conta
+"só isso mesmo, quanto deu?",conta
+qual valor total?,conta
+quanto que vai ficar?,conta
+quanto custou?,conta
+quanto saiu tudo?,conta
+quantos reais ficou?,conta
+deu quantos reais?,conta
+qual valor da conta?,conta
+quanto ficou o pedido?,conta
+quanto deu?,conta
+quero o pedido entregue na rua 13,entrega
+quero retirar,entrega
+vou ai pegar,entrega
+entrega,entrega
+vou querer para levar,entrega
+quero pra entrega,entrega
+entrega em casa,entrega
+tem como retirar?,entrega
+vou querer o pedido entregue,entrega
+vou aí buscar,entrega
+envia o pedido aqui para casa,entrega
+retirada,entrega
+vem o que no xbacon?,informacao
+que que tem no xtudo?,informacao
+o que vem no xtudo?,informacao
+tem como retirar ingrediente?,informacao
+tem bacon no xtudo?,informacao
+tem ovo no xtudo?,informacao
+qual o tamanho do hamburguer?,informacao
+quantas fatias de bacon?,informacao
+quais adicionais tem?,informacao
+a maionese é da casa?,informacao
+o que vem no xbacon?,informacao
+vocês tem acompanhamento?,informacao
+vou pagar no cartao,pagamento
+vou pagar em dinheiro,pagamento
+troco para 50 ,pagamento
+Dinheiro,pagamento
+vai ser no crédito,pagamento
+Crédito,pagamento
+quero pagar por paypal,pagamento
+vou passar no débito,pagamento
+vai ser dinheiro,pagamento
+passa no débito,pagamento
+aceita cartão?,pagamento
+manda máquina para cartão,pagamento
+vou querer um xbacon com adicional de hamburguer,pedido
+adicional de cheddar,pedido
+vou querer tambem uma coca 2L,pedido
+vou querer um xtudo e uma coca,pedido
+Queria 2 XBacon e 1 XTudo,pedido
+1 Coca de litro por favor,pedido
+2 Xbacon e 3 coca litro,pedido
+"Certo, quero um XTudo pra entrega",pedido
+Um suco e dois copos de plástico,pedido
+por hora vou querer apenas o xbacon então,pedido
+descola uma porção de batata caprichada,pedido
+uma coca cola lata,pedido
+quanto tempo demora?,tempo
+quanto tempo para ficar pronto?,tempo
+Qual é o tempo estimado?,tempo
+demora muito para chegar?,tempo
+qual tempo de preparo?,tempo
+vai demorar?,tempo
+tempo de preparo,tempo
+acha que fica pronto quando?,tempo
+que horas chega?,tempo
+quanto tempo pra entregar?,tempo
+que horas fica pronto?,tempo
+quando devo buscar?,tempo
