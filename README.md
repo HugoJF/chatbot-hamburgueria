@@ -23,6 +23,27 @@ Inicie o bot
 TELEGRAM_TOKEN=token python3 bot.py
 ```
 
+## Instalação pelo Dockerfile
+
+Clone esse repositório
+```console
+git clone git@github.com:HugoJF/chatbot-hamburgueria.git
+```
+
+Entre no diretório
+```console
+cd chatbot-hamburgueria
+```
+
+Construa a imagem 
+```console
+docker build -t chatbot .
+```
+
+Inicie um container com a imagem passando o token como variável de ambiente
+```console
+docker run -e TELEGRAM_TOKEN=my_token --name mybot chatbot:latest
+```
 ## Variáveis de ambiente
 ```console
 TELEGRAM_TOKEN=token_do_bot_do_telegram
