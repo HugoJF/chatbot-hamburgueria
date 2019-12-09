@@ -36,7 +36,7 @@ classifiers = {
     'tree':       DecisionTreeClassifier(max_depth=5),
     'regression': LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial'),
 }
-
+'''
 # Aumenta o tamanho das imagens (matrizes de confusão)
 pylab.rcParams['figure.figsize'] = (16, 10)
 
@@ -111,6 +111,7 @@ for name, classifier in classifiers.items():
 
     # Mostra matriz imagem
     # plt.show()
+'''
 
 
 # Treina modelo da regressão e classifica uma mensagem
@@ -173,9 +174,9 @@ def conta(message, user_data):
 
 # Lógica para intenção `tempo`
 def tempo(message, user_data):
-    order = user_data.order
+    order = user_data['order']
     # Soma quantidade de itens
-    items = reduce(lambda cur, x: cur + x, list(order.values()))
+    items = reduce(lambda cur, x: cur + x, list(order.values()), 0)
     return "Tempo estimado para entrega: %dmin" % (items * config.min_per_item + 20)
 
 
@@ -239,7 +240,7 @@ def informacao(message, user_data):
         p = config.products[prod]
         nome = p['nome']
         desc = p['descricao']
-        response += 'Informacoes sobre o %s: %s\n' % (nome, desc)
+        response += 'Informacoes sobre o %s: \n\n*%s*\n' % (nome, desc)
 
     return response
 
@@ -303,7 +304,7 @@ def finish(user_data):
     return response
 
 
-print('running telegram')
+print('Polling Telegram')
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -320,7 +321,7 @@ def text_message(update, context):
     actions = {
         'cardapio':   cardapio,
         'conta':      conta,
-        'entrega':    entrega,  # TODO: precisa do etiquetador
+        'entrega':    entrega,
         'tempo':      tempo,
         'bebidas':    bebidas,
         'informacao': informacao,
@@ -333,9 +334,8 @@ def text_message(update, context):
     else:
         call = nao_entendi
 
-    print(intention)
+    print('Itention: %s' % intention)
     print(h.get_tags(message))
-    print(context)
 
     user_data = context.user_data
 
@@ -346,8 +346,9 @@ def text_message(update, context):
     if 'shipping_method' not in user_data:
         user_data['shipping_method'] = ''
 
+    print('Calling intention')
     response = call(message, user_data)
-    print('response: %s' % response)
+    print('Response: %s' % response)
     update.message.reply_text(response, parse_mode=telegram.ParseMode.MARKDOWN)
 
     if done(user_data):
@@ -365,7 +366,7 @@ def bot_help(update, context):
 
 def error(update, context):
     """Log Errors caused by Updates."""
-    logger.warning('Update "%s" caused error "%s"' % update, context.error)
+    logger.warning('Update "%s" caused error "%s"' % (update, context.error))
 
 
 updater = Updater(os.environ['TELEGRAM_TOKEN'], use_context=True)
